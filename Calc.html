@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        #Number {
+            width: 150px;
+            box-shadow: 0px 0px 3px white;
+            border-radius: 2px;
+            /* border: 1px solid rgb(17, 17, 17); */
+            width: 160px;
+            height: 20px;
+            padding-left: 10px;
+        }
+
+        .divform {
+            /* border: 2px solid rgb(66, 66, 66); */
+            background-color: rgb(51, 50, 50);
+            width: 200px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px grey;
+        }
+
+        .buttons {
+            /* border: 1px solid grey; */
+            border: 1px solid black;
+
+            border-radius: 2px;
+            margin-top: -19px;
+            width: 35px;
+            /* background-color: white; */
+            background-color: rgb(22, 22, 22);
+            box-shadow: 0px 0px 2px white;
+            color: white;
+            height: 25px;
+        }
+
+        .buttons:hover {
+            background-color: white;
+            box-shadow: 0.5px 0.5px 3px yellow;
+            border: 1px solid white;
+            color: black;
+        }
+
+        #zero {
+            width: 75px;
+        }
+
+        #equal {
+            height: 66px;
+            position: absolute;
+            right: 313px;
+            margin-top: -3px;
+        }
+
+        #equal:hover {
+            box-shadow: 0.5px 0.5px 5px red;
+        }
+
+        #form {
+            padding-left: 0px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            /* height: 200px; */
+        }
+
+        #secLast {
+            margin-left: -37px;
+        }
+
+        #Last {
+            margin-left: -37px;
+            margin-top: -19px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="divform">
+            <form name="forms" id="form">
+                <input id="Number" type="text" name="answer"><br><br>
+                <input class="buttons" type="button" value=" C " onclick="forms.answer.value = ' ' ">
+                <input class="buttons" type="button" value=" / " onclick="forms.answer.value += '/' ">
+                <input class="buttons" type="button" value=" * " onclick="forms.answer.value += '*' ">
+                <input class="buttons" type="button" value="Del">
+                <!-- onclick="forms.answer.value -=  " -->
+
+                <br><br>
+
+                <input class="buttons" type="button" value=" 7 " onclick="forms.answer.value += '7' ">
+                <input class="buttons" type="button" value=" 8 " onclick="forms.answer.value += '8' ">
+                <input class="buttons" type="button" value=" 9 " onclick="forms.answer.value += '9' ">
+                <input class="buttons" type="button" value=" - " onclick="forms.answer.value += '-' ">
+
+
+                <br><br>
+
+                <input class="buttons" type="button" value=" 4 " onclick="forms.answer.value += '4' ">
+                <input class="buttons" type="button" value=" 5 " onclick="forms.answer.value += '5' ">
+                <input class="buttons" type="button" value=" 6 " onclick="forms.answer.value += '6' ">
+                <input class="buttons" type="button" value=" + " onclick="forms.answer.value += '+' ">
+
+
+                <br><br>
+                <div id="secLast">
+                    <input class="buttons" type="button" value=" 1 " onclick="forms.answer.value += '1' ">
+                    <input class="buttons" type="button" value=" 2 " onclick="forms.answer.value += '2' ">
+                    <input class="buttons" type="button" value=" 3 " onclick="forms.answer.value += '3' ">
+                    <input class="buttons" id="equal" type="button" value=" = "
+                        onclick="forms.answer.value = eval(forms.answer.value) ">
+                </div>
+                <br><br>
+                <div id="Last">
+                    <input class="buttons" id="zero" type="button" value=" 0 " onclick="forms.answer.value += '0' ">
+                    <input class="buttons" type="button" value=" . " onclick="forms.answer.value += '.' ">
+                </div>
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>
